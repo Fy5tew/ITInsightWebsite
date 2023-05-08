@@ -1,0 +1,131 @@
+.main {
+    background: #0567DC29;
+    padding: 30px 0 40px 0;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    &__header {
+        width: 100%;
+        margin: 0;
+        height: fit-content;
+        line-height: 60px;
+        font-size: 36px;
+        font-weight: 800;
+
+        text-align: center;
+        background: #FFFFFF;
+        border-radius: 10px;
+
+        mix-blend-mode: normal;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+
+    &__articles {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        .article {
+            display: flex;
+            gap: 30px;
+            padding: 30px;
+            background-color: white;
+            border-radius: 25px;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+            .icon {
+                width: 40px;
+            }
+
+            &__top-info {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            &__bottom-info {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            &__stats {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+
+            &__author {
+                font-size: 20px;
+                font-weight: 700;
+            }
+
+            &__date {
+                font-size: 20px;
+                font-weight: 300;
+                text-decoration: underline;
+            }
+
+            &__title {
+            }
+
+            &__preview {
+                text-indent: 0px;
+            }
+
+            &__views {
+                font-size: 20px;
+                text-decoration: underline;
+            }
+
+            &__comments {
+                font-size: 20px;
+                text-decoration: underline;
+            }
+
+            &__link {
+                background: rgba(5, 103, 220, 0.16);
+                border-radius: 10px;
+                padding: 10px;
+                transition: all 300ms ease-in-out;
+
+                a {
+                    color: black;
+                    text-decoration: none;
+                    font-size: 20px;
+                    font-weight: 600;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            &__image {
+                display: flex;
+                align-items: center;
+                max-width: 30%;
+                width: 100%;
+                img {
+                    width: 100%;
+                    border-radius: 20px;
+                }
+            }
+
+            @media (max-width: 1040px) {
+                flex-direction: column;
+
+                &__image {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}

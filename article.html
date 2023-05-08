@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>IT Insight — Чтение</title>
+    <link rel="icon" href="assets/favicon.png" type="image/png">
+    <link rel="stylesheet" href="css/article.css">
+    <script defer type="text/javascript" src="js/menu.js"></script>
+    <script defer type="text/javascript" src="js/popup.js"></script>
+    <script defer type="text/javascript" src="js/utils.js"></script>
+    <script defer type="text/javascript" src="js/article.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="header__wrapper wrapper">
+            <div class="header__logo">
+                <a href="index.html">
+                    <img src="assets/logo.png" alt="IT Insight" />
+                </a>
+            </div>
+            <nav class="header__nav">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="articles.html">Статьи</a></li>
+                </ul>
+            </nav>
+            <div class="header__account">
+                <a href="#" data-login-open>Вход</a>
+                <a href="#" data-registration-open>Регистрация</a>
+                <img class="icon" src="assets/icons/account.svg" />
+            </div>
+            <div class="menu" data-menu data-status="closed">
+                <button class="menu__burger" data-menu-toggle>
+                    <img class="icon icon__open" src="assets/icons/menu-open.svg" />
+                    <img class="icon icon__close" src="assets/icons/menu-close.svg" />
+                </button>
+                <div class="menu__curtain">
+                    <div class="menu__item">
+                        <img class="icon" src="assets/icons/account.svg" />
+                    </div>
+                    <div class="menu__item">
+                        <a data-login-open href="#">Вход</a>
+                    </div>
+                    <div class="menu__item">
+                        <a data-registration-open href="#">Регистрация</a>
+                    </div>
+                    <div class="menu__item">
+                        <a href="index.html">Главная</a>
+                    </div>
+                    <div class="menu__item">
+                        <a href="articles.html">Статьи</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="main__wrapper wrapper">
+            <article class="main__article article">
+                <h1 class="article__header"></h1>
+                <div class="article__content">
+                    <div class="article__info">
+                        <img class="icon" src="assets/icons/author.png" alt="">
+                        <span class="article__author"></span>
+                        <span class="article__date"></span>
+                    </div>
+                    <div class="article__image">
+                        <img src="#" alt="">
+                    </div>
+                    <div class="article__text">
+                    </div>
+                    <div class="article__stats">
+                        <img class="icon" src="assets/icons/views.png" alt="">
+                        <span class="article__views"></span>
+                        <img class="icon" src="assets/icons/comments.png" alt="">
+                        <span class="article__comments"></span>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer__wrapper wrapper">
+            <p class="footer__copyright">
+                © 2019–2023, IT Insight
+            </p>
+        </div>
+    </footer>
+    <dialog class="registration-popup" data-registration>
+        <form>
+            <h1>Регистрация</h1>
+            <label>
+                Фамилия
+                <input type="text" name="lastName" placeholder=" " required />
+            </label>
+            <label>
+                Имя
+                <input type="text" name="firstName" placeholder=" " required />
+            </label>
+            <label>
+                Отчество
+                <input type="text" name="surname" placeholder=" " />
+            </label>
+            <label>
+                Никнейм
+                <input type="text" name="nickname" placeholder=" " />
+            </label>
+            <label>
+                E-mail
+                <input type="email" name="email" placeholder=" " required />
+            </label>
+            <label>
+                Пароль
+                <input type="password" name="password" placeholder=" " required />
+            </label>
+            <label>
+                Повторите пароль
+                <input type="password" name="password" placeholder=" " required /> 
+            </label>
+            <menu>
+                <input type="submit" value="Зарегистрироваться" />
+                <input type="button" value="Отменить" data-registration-close />
+            </menu>
+        </form>
+    </dialog>
+    <dialog class="login-popup" data-login>
+        <form>
+            <h1>Вход</h1>
+            <label>
+                Email
+                <input type="email" name="email" placeholder=" " required />
+            </label>
+            <label>
+                Пароль
+                <input type="password" name="password" placeholder=" " required />
+            </label>
+            <menu>
+                <input type="submit" value="Войти" />
+                <input type="button" value="Отменить" data-login-close />
+            </menu>
+        </form>
+    </dialog>
+</body>
+</html>
