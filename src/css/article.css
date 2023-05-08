@@ -1,0 +1,335 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: sans-serif;
+  font-weight: 800;
+}
+
+p {
+  margin: 0 0 20px 0;
+  font-family: Lato;
+  font-weight: 500;
+  line-height: 30px;
+  letter-spacing: 0.05em;
+  text-align: left;
+  text-indent: 30px;
+}
+
+p, a, input, label, span {
+  font-family: sans-serif;
+}
+
+.wrapper {
+  max-width: 1680px;
+  padding: 0 120px;
+}
+@media (max-width: 1200px) {
+  .wrapper {
+    padding: 0 20px;
+  }
+}
+
+.header, .main, .footer {
+  display: flex;
+  justify-content: center;
+}
+.header__wrapper, .main__wrapper, .footer__wrapper {
+  width: 100%;
+}
+
+.main {
+  margin-top: 70px;
+  flex-grow: 1;
+}
+
+.header {
+  height: 70px;
+  width: 100%;
+  background: #0F407B;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+.header__wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+.header__logo {
+  min-width: 151px;
+  width: 151px;
+  height: 50px;
+}
+.header__logo img {
+  width: 100%;
+}
+.header__nav {
+  max-width: 170px;
+  width: 100%;
+}
+.header__nav ul {
+  font-size: 20px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+}
+.header__nav ul li a {
+  color: #AEC8E8;
+  text-decoration: none;
+  transition: color 300ms ease-in-out;
+}
+.header__nav ul li a:hover, .header__nav ul li a[data-current] {
+  color: #ffffff;
+  text-decoration: underline;
+}
+.header__account {
+  max-width: 292px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+.header__account a {
+  font-size: 20px;
+  color: #AEC8E8;
+  transition: color 300ms ease-in-out;
+}
+.header__account a:hover {
+  color: #ffffff;
+}
+.header__account .icon {
+  width: 50px;
+}
+.header .menu {
+  display: none;
+}
+.header .menu__burger {
+  background: none;
+  border: none;
+  transition: all 0.25s linear;
+}
+.header .menu__burger .icon {
+  width: 50px;
+}
+.header .menu__burger .icon__close {
+  display: none;
+}
+.header .menu__burger .icon__open {
+  display: none;
+}
+.header .menu__curtain {
+  background-color: #0F407B;
+  width: 250px;
+  height: 300vh;
+  position: absolute;
+  top: 70px;
+  right: 0;
+  transition: all 0.3s linear;
+  filter: drop-shadow(-10px -4px 10px rgba(0, 0, 0, 0.25));
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 50px;
+  padding: 20px;
+}
+.header .menu__item .icon {
+  width: 70px;
+}
+.header .menu__item a {
+  font-size: 25px;
+  color: #AEC8E8;
+  transition: color 300ms ease-in-out;
+}
+.header .menu__item a[data-current] {
+  color: #ffffff;
+}
+.header .menu[data-status=closed] .menu__burger .icon__open {
+  display: block;
+}
+.header .menu[data-status=closed] .menu__curtain {
+  translate: 250px;
+}
+.header .menu[data-status=opened] .menu__burger {
+  rotate: 90deg;
+}
+.header .menu[data-status=opened] .menu__burger .icon__close {
+  display: block;
+}
+.header .menu[data-status=opened] .menu__curtain {
+  translate: 0;
+}
+@media (max-width: 800px) {
+  .header__nav {
+    display: none;
+  }
+  .header__account {
+    display: none;
+  }
+  .header .menu {
+    display: block;
+  }
+}
+
+.footer {
+  background: #0F407B;
+  height: 50px;
+}
+.footer__wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer__copyright {
+  margin: 0;
+  text-indent: 0px;
+  color: #FFFFFF;
+}
+
+dialog {
+  min-width: 30%;
+  border-radius: 15px;
+}
+dialog::-webkit-scrollbar {
+  display: none;
+}
+dialog::backdrop {
+  backdrop-filter: blur(4px);
+}
+dialog form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+dialog form > h1 {
+  text-align: center;
+}
+dialog form > * {
+  width: 100%;
+}
+dialog form > * > input {
+  width: 100%;
+  padding: 5px;
+  outline: 3px solid transparent;
+  outline-offset: -1px;
+}
+dialog form > * > input:where([type=submit], [type=reset], [type=button]) {
+  outline: none;
+  background-color: #0F407B;
+  color: #AEC8E8;
+  border-radius: 10px;
+}
+dialog form > * > input:where([type=submit], [type=reset], [type=button]):hover {
+  color: white;
+}
+dialog form > * > input:invalid:where(:focus, :not(:placeholder-shown)) {
+  outline-color: red;
+}
+dialog form > * > input:valid:not(:placeholder-shown) {
+  outline-color: green;
+}
+dialog form menu {
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.main {
+  background: rgba(5, 103, 220, 0.1607843137);
+  padding: 30px 0 40px 0;
+}
+.main__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.main .article {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.main .article .icon {
+  width: 40px;
+}
+.main .article__header {
+  width: 100%;
+  margin: 0;
+  padding: 10px;
+  height: fit-content;
+  text-align: center;
+  background: #FFFFFF;
+  border-radius: 10px;
+  mix-blend-mode: normal;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.main .article__content {
+  padding: 30px;
+  border-radius: 25px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.main .article__info {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.main .article__stats {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.main .article__author {
+  font-size: 20px;
+  font-weight: 700;
+}
+.main .article__date {
+  font-size: 20px;
+  font-weight: 300;
+  text-decoration: underline;
+}
+.main .article__views {
+  font-size: 20px;
+  text-decoration: underline;
+}
+.main .article__comments {
+  font-size: 20px;
+  text-decoration: underline;
+}
+.main .article__image img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+/*# sourceMappingURL=article.css.map */
