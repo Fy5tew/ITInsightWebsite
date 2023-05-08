@@ -310,7 +310,10 @@ dialog form menu {
 }
 @media (max-width: 1000px) {
   .main__wrapper {
-    flex-direction: column;
+    flex-direction: column-reverse;
+  }
+  .main__header {
+    order: 1;
   }
   .main__section {
     width: 100%;

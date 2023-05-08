@@ -57,7 +57,10 @@
 
     @media (max-width: 1000px) {
         &__wrapper {
-            flex-direction: column;
+            flex-direction: column-reverse;
+        }
+        &__header {
+            order: 1;
         }
         &__section {
             width: 100%;
