@@ -1,8 +1,20 @@
+const ROOT_PATH_REGEXP = /.*(?=\/)/;
+
 const ARTICLES_DATA_URL = '/data/articles.xml';
 
 
+function getRootPath() {
+    return location.href.match(ROOT_PATH_REGEXP)[0];
+}
+
+
+function getFullURL(path) {
+    return getRootPath() + path;
+}
+
+
 async function getArticles() {
-    const response = await fetch(ARTICLES_DATA_URL);
+    const response = await fetch(getFullURL(ARTICLES_DATA_URL));
     const data = await response.text();
 
     const parser = new DOMParser();
