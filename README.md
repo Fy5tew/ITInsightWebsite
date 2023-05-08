@@ -1,5 +1,5 @@
 # IT Insight Website
-Курсовой проект БГТУ 1 семестр 2 курс
+Курсовой проект БГТУ 2 семестр 1 курс
 ## Запуск
 Перейти в директорию проекта
 
@@ -12,4 +12,4 @@
 
     http://localhost:8000/index.html
 ## GitHub Pages
-Открыть сайт можно [здесь](https://github.com/fy5tew)
+Открыть сайт можно [здесь](https://fy5tew.github.io/ITInsightWebsite/)
