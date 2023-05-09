@@ -12,4 +12,4 @@
 
     http://localhost:8000/index.html
 ## GitHub Pages
-Открыть сайт можно [здесь](https://fy5tew.github.io/ITInsightWebsite/)
+Открыть сайт можно [здесь](https://fy5tew.github.io/course-project-1-2/index.html)
