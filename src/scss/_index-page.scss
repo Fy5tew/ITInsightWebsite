@@ -55,7 +55,7 @@
         }
     }
 
-    @media (max-width: 1000px) {
+    @media screen and (max-width: 1000px) {
         &__wrapper {
             flex-direction: column-reverse;
         }
@@ -75,7 +75,7 @@
         }
     }
 
-    @media (max-width: 800px) {
+    @media screen and (max-width: 800px) {
         &__images {
             flex-direction: column;
             justify-content: flex-start;

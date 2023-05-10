@@ -14,10 +14,14 @@ const formatArticle = (id, article) => {
                 <a href="article.html?id=${id}">Читать далее</a>
             </div>
             <div class="article__stats">
-                <img class="icon" src="assets/icons/views.png" />
-                <span class="article__views">${article.views}</span>
-                <img class="icon" src="assets/icons/comments.png" />
-                <span class="article__comments">${article.comments}</span>
+                <div>
+                    <img class="icon" src="assets/icons/views.png" />
+                    <span class="article__views">${article.views}</span>
+                </div>
+                <div>
+                    <img class="icon" src="assets/icons/comments.png" />
+                    <span class="article__comments">${article.comments}</span>
+                </div>
             </div>
         </div>
     </div>

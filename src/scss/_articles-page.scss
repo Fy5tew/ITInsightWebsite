@@ -59,7 +59,15 @@
             &__stats {
                 display: flex;
                 align-items: center;
-                gap: 10px;
+                gap: 15px;
+                flex-wrap: wrap;
+
+                > div {
+                    display: flex;
+                    gap: 10px;
+                    flex-wrap: wrap;
+                    align-items: center;
+                }
             }
 
             &__author {
@@ -119,12 +127,16 @@
                 }
             }
 
-            @media (max-width: 1040px) {
+            @media screen and (max-width: 1040px) {
                 flex-direction: column;
 
                 &__image {
                     max-width: 100%;
                 }
+            }
+
+            @media screen and (max-width: 330px) {
+                padding: 10px;
             }
         }
     }
