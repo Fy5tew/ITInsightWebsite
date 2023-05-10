@@ -4,6 +4,7 @@ $content-indent: 120px;
 
 * {
     box-sizing: border-box;
+    word-break: break-word;
 }
 
 
@@ -12,6 +13,9 @@ html, body {
     margin: 0;
     max-width: 100vw;
     overflow-x: hidden;
+    &:has([data-status="opened"]) {
+        overflow-y: hidden;
+    }
 }
 
 
@@ -48,8 +52,12 @@ p, a, input, label, span {
     max-width: $content-width;
     padding: 0 $content-indent;
 
-    @media (max-width: 1200px) {
+    @media screen and (max-width: 1200px) {
         padding: 0 20px;
+    }
+
+    @media screen and (max-width: 330px) {
+        padding: 0 5px;
     }
 }
 
