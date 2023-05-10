@@ -1,3 +1,14 @@
+@font-face {
+    font-family: "Open Sans";
+    src: url("../fonts/OpenSans.ttf");
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("../fonts/Lato.ttf");
+}
+
+
 $content-width: 1680px;
 $content-indent: 120px;
 
@@ -27,14 +38,13 @@ body {
 
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-weight: 800;
 }
 
 
 p {
     margin: 0 0 20px 0;
-    font-family: Lato;
     font-weight: 500;
     line-height: 30px;
     letter-spacing: 0.05em;
@@ -44,7 +54,7 @@ p {
 
 
 p, a, input, label, span {
-    font-family: sans-serif;
+    font-family: "Lato";
 }
 
 
