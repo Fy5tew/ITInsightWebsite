@@ -160,9 +160,10 @@ p, a, input, label, span {
 }
 .header .menu__curtain {
   background-color: #0F407B;
-  height: 100vh;
+  height: calc(100vh - 70px);
   overflow-y: scroll;
   position: absolute;
+  top: 70px;
   right: 0;
   transition: all 0.3s linear;
   filter: drop-shadow(-10px -4px 10px rgba(0, 0, 0, 0.25));
@@ -217,6 +218,10 @@ p, a, input, label, span {
 @media screen and (max-width: 225px) {
   .header__wrapper {
     justify-content: center;
+  }
+  .header .menu__curtain {
+    height: calc(100vh - 105px);
+    top: 105px;
   }
 }
 
